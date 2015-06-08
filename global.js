@@ -1,0 +1,1 @@
+emailAddresses = module.exports;
