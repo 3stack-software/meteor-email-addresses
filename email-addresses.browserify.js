@@ -1,0 +1,1 @@
+emailAddresses = require('email-addresses');

@@ -1,6 +1,6 @@
 Package.describe({
   name: "3stack:email-addresses",
-  version: "2.0.1",
+  version: "2.0.2",
   summary: 'https://github.com/FogCreek/email-addresses',
   git: 'https://github.com/3stack-software/meteor-email-addresses',
   documentation: 'README.md'
@@ -11,10 +11,9 @@ Npm.depends({
 });
 
 Package.onUse(function(api){
-  api.export('emailAddresses', 'client');
+  api.export('emailAddresses');
+  api.use('cosmos:browserify@0.4.0');
   api.addFiles([
-    'module.js',
-    '.npm/package/node_modules/email-addresses/lib/email-addresses.js',
-    'global.js'
-  ], 'client');
+    'email-addresses.browserify.js'
+  ]);
 });
